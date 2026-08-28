@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Order</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+  <section class="order-shell">
+    <div class="order-card">
+      <div class="order-head">
+        <h1>Place Your Order</h1>
+        <a href="visit.html" class="back-link">Continue shopping</a>
+      </div>
+
+      <div class="summary-box">
+        <h2>Order Summary</h2>
+        <div class="summary-meta">
+          <span>Total items:</span>
+          <strong><span id="item-count">0</span></strong>
+        </div>
+        <ul id="order-items"></ul>
+        <div class="total-row">
+          <span>Total</span>
+          <strong>₦ <span id="order-total">0</span></strong>
+        </div>
+      </div>
+
+      <form class="order-form">
+        <label>
+          Name:
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+
+        <label>
+          Phone number:
+          <input type="tel" name="phone" required>
+        </label>
+
+        <label>
+          Delivery address:
+          <textarea name="address" rows="4" placeholder="Your delivery address" required></textarea>
+        </label>
+
+        <button type="submit">Confirm order</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="order.js"></script>
+</body>
+</html>

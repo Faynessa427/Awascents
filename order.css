@@ -1,0 +1,132 @@
+
+
+body {
+  margin: 0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #f5e9ff 0%, #ecdff8 100%);
+  color: #36034e;
+}
+
+.order-shell {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.order-card {
+  width: min(760px, 100%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 28px;
+}
+
+.order-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.order-head h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.back-link {
+  color: #6b0f78;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.summary-box {
+  background: #bea5d7;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 24px;
+}
+
+.summary-box h2 {
+  margin-top: 0;
+}
+
+.summary-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #36034e;
+}
+
+#order-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#order-items li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #36034e;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #36034e;
+  font-size: 1.1rem;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.order-form input,
+.order-form textarea {
+  width: 80%;
+  border: 1px solid #36034e;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font: inherit;
+  resize: vertical;
+}
+
+.order-form button {
+  border: none;
+  border-radius: 12px;
+  background: #36034e;
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 520px) {
+  .order-card {
+    padding: 20px 16px;
+  }
+
+  .order-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

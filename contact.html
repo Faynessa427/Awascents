@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="contact.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contact Us </title>
+  </head>
+  <body>
+    <section class="bar">
+    <h2><strong>AWASCENTS</strong></h2>
+    <div class="menu-wrap">
+      <button class="menu-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="visit.html"> Visit Store</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms of use</a>
+      </nav>
+    </div>
+  </section>
+    <h1> Contact Us.</h1>
+    <div class="content">
+      <p>Your Name: </p>
+      <input type="text" id="name" placeholder="Name" required>
+      <p> Your Email</p>
+      <input type="email" id="email"s placeholder="Email address" required>
+       <p id="messageError"></p>
+      <p> Message:</p>
+      <textarea id="textarea"></textarea>
+      <p id="messageError"></p>
+      <button id="button"> SEND MESSAGE</button>
+      <section class="contact-box">
+        <h4>Phone:  </h4>
+        <h5> 000-0000-0000</h5>
+        <h4> Email :  </h4>
+        <h5> AwaScents@gmail.com</h5>
+      </section>
+    </div>
+
+    <script src="contact.js"></script>
+  </body>
+</html>
+    

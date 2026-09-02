@@ -1,6 +1,6 @@
  body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Cormorant Garamond', serif;
       background: #ecdff8;
       overflow-x: hidden;
     }
@@ -163,10 +163,7 @@ a {
 
 .visit-store-button {
   display: block;
-  align-items:initial;
-  margin-left:7px;
-  margin-bottom:25px;
-  margin-top:25px;
+  margin: 25px auto;
   border: none;
   border-radius: 999px;
   background: #36034e;
@@ -187,35 +184,39 @@ a {
 }
 .details{
   display:flex;
-  justify-content:space-between;
-  margin: 40px 10px 20px 10px;
+  justify-content:center;
+  gap:20px;
+  flex-wrap: wrap;
+  margin: 40px 15px 20px 15px;
 }
 .rating{
-  background-color:#f7f4f9;
+  background-color:#d8c7e4;
   color:#5b0882;
   padding:10px 10px 10px;
   border-radius:10px;
 }
 .dispatch{
-  background-color:#f7f4f9;
+  background-color:#d8c7e4;
   color:#5b0882;
   padding:10px 10px 10px 10px;
   border-radius:10px;
 }
 .first-note{
   font-size: 15px;
-  font-family: 'playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   color:#36034e;
-  margin-left:4.5px;
+  margin-left:15px;
+  margin-right:15px;
   letter-spacing:1.5px;
   margin-bottom: 40px;
 }
 .second-note {
   width: min(90vw, 900px);
   margin: 0 auto;
+  padding: 0 15px;
   text-align:initial;
-  font-family: 'Bodoni Moda', serif;
-  margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 30px;
 }
 
 .second-note h3 {
@@ -229,10 +230,12 @@ a {
   position: relative;
   width: 100%;
   max-width: 650px;
-  margin: 0 auto 28px;
+  margin: 0 auto ;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 80px;
+  margin-left:20px;
+  margin:20px;
 }
 .video-container video{
   width: 100%;
@@ -240,14 +243,32 @@ a {
   display: block;
   object-fit: cover;
 }
+.imageandwriteup1,
+.imageandwriteup2,
+.imageandwriteup3{
+  background-color: #cbb9e0;
+  margin-left:15px;
+  margin-right: 15px;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  padding-right:15px;
+}
+.bestseller-logo{
+  margin-bottom: 20px;
+  background-color: #36034e;
+  color: #cbb9e0;
+  border-radius: 12px;
+  width: 80px;
+  padding: 5px 5px 5px 5px ;
+}
 .third-note {
-  width: min(90vw, 900px);
-  margin: 0 auto;
-  padding: 12px 12px 28px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .third-note h3 {
-  margin: 0;
+  margin: 0 0 12px 0;
   text-align: center;
   font-size: clamp(1.0rem, 2vw, 1.4rem);
   line-height: 1.6;
@@ -257,24 +278,21 @@ a {
 .third-note a {
   display: block;
   width: fit-content;
-  margin: 0 auto;
-  color: #ac22ec;
-  text-decoration:underline;
-  font-size: 19px;
+  margin: 10px auto 0;
+  color: #b844ee;
+  font-size: 21px;
   text-align: center;
 }
 .green-fresh-product {
-  width: min(90vw, 900px);
   margin: 0 auto;
   padding: 12px 12px 28px;
   text-align: center;
+  border-radius: 50%;
 }
 .green-fresh-product img {
-  width: min(100%, 650px);
-  height: auto;
+  border-radius: 50%;
   margin: 0 auto 18px;
   display: block;
-  border-radius: 10px;
 }
 .green-fresh-product figcaption {
   margin: 0 auto 14px;
@@ -293,17 +311,16 @@ a {
   font-size: 19px;
 }
 .yellow-product {
-  width: min(90vw, 900px);
   margin: 0 auto;
   padding: 12px 12px 28px;
   text-align: center;
+  border-radius: 50%;
 }
 .yellow-product img {
-  width: min(100%, 650px);
-  height: auto;
+
   margin: 0 auto 18px;
   display: block;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 .yellow-product figcaption {
   margin: 0 auto 14px;
@@ -330,11 +347,13 @@ a {
 }
 .bottom-contact-details{
     background-color:#2d073e;
-    padding: 6px 6px 6px 6px;
+    padding: 20px 15px;
     color: #cda9f6;
+    text-align: center;
 }
 h4{
     font-size: 13px;
+    margin: 10px 0;
 }
 @media (max-width: 640px) {
   .bar {
@@ -346,8 +365,22 @@ h4{
     letter-spacing: 0;
   }
 
-  .first-welcome {
-    padding-top: 32px;
+  .first-note {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .details {
+    margin: 30px 15px 20px 15px;
+  }
+
+  .imageandwriteup1,
+  .imageandwriteup2,
+  .imageandwriteup3 {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   .slideshow,

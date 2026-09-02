@@ -16,9 +16,9 @@ if (button) {
   });
 }
 
-const video = document.querySelector('.video-container video');
+const videos = document.querySelectorAll('.video-container video');
 
-if (video) {
+videos.forEach(video => {
   video.muted = true;
   video.controls = false;
   video.loop = true;
@@ -27,7 +27,7 @@ if (video) {
     video.play().catch(() => {});
   });
   video.play().catch(() => {});
-}
+});
 
 // Perfume slideshow: slide-in-from-right, one after another
 (() => {

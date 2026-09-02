@@ -1,6 +1,10 @@
+html {
+      background: #ecdff8;
+    }
+
 body {
       margin: 0;
-      font-family: Arial, sans-serif;
+  font-family: 'Cormorant Garamond', serif;
       background: #ecdff8;
       overflow-x: hidden;
     }
@@ -66,16 +70,36 @@ body {
       display: block;
     }
     .container{
-        margin-top: 40px ;
-        color: #5b0882;
-        margin-left: 30px;
-        margin-bottom: 30px;
+        width: min(90vw, 900px);
+        margin: 0 auto 50px;
+        color: #4a155d;
+        line-height: 1.6;
     }
     h1{
-      margin-left: 2px;
-      color: #5b0882;
-      text-decoration: underline;
+      width: min(90vw, 900px);
+      margin: 34px auto 24px;
+      color: #36034e;
+      font-size: clamp(2rem, 5vw, 3rem);
+      text-align: center;
     }
-    a{
-      color: rgb(88, 28, 88);
+    .container h2{
+      margin: 28px 0 8px;
+      color: #36034e;
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+    }
+    .container p,
+    .container ol{
+      margin: 0 0 16px;
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+    }
+    .container ol{
+      padding-left: 1.5em;
+    }
+    .complaint{
+      margin-top: 32px !important;
+      text-align: center;
+    }
+    .complaint a{
+      color: #ac22ec;
+      text-decoration: none;
     }

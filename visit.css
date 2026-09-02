@@ -1,8 +1,12 @@
 
 
+html {
+  background: #ecdff8;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   background: #ecdff8;
   color: #36034e;
   overflow-x: hidden;
@@ -103,10 +107,18 @@ img {
 .first-one,
 .second-one,
 .third-one {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: rgb(57, 6, 57);
-  font-style: italic;
+  width: min(calc(100% - 40px), 1180px);
+  margin: 0 auto;
+  color: #36034e;
   padding: 28px 20px 30px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 14px;
 }
 
 .first-one h1,
@@ -117,10 +129,6 @@ img {
   line-height: 1.1;
 }
 
-.carousel-wrap {
-  position: relative;
-}
-
 .first-row,
 .Second-row,
 .third-row {
@@ -129,6 +137,7 @@ img {
   overflow-x: auto;
   scroll-snap-type: x proximity;
   padding: 6px 6px 12px;
+    margin: 0 -6px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -153,6 +162,12 @@ img {
   scroll-snap-align: start;
 }
 
+.first-row,
+.Second-row,
+.third-row {
+  margin: 0 -6px;
+}
+
 .first:hover,
 .First:hover,
 .Second:hover,
@@ -168,7 +183,6 @@ img {
 .third-row img,
 .third-row video {
   width: 100%;
-  height: 220px;
   object-fit: cover;
   border-radius: 14px;
   margin-bottom: 12px;
@@ -210,10 +224,11 @@ img {
   position: sticky;
   box-sizing: border-box;
   bottom: 16px;
-  margin: 8px 8px 8px;
+  width: min(calc(100% - 40px), 1180px);
+  margin: 8px auto;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #36034e;
-  border-radius: 28px;
+  border-radius: 15px;
   padding: 18px 20px;
   box-shadow: 0 16px 26px rgba(35, 2, 50, 0.1);
 }
@@ -351,4 +366,3 @@ img {
   }
 }
 
-/* Keep the hamburger toggle visible at wider widths to match other pages. */

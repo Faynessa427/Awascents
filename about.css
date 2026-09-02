@@ -1,6 +1,10 @@
+ html {
+      background: #ecdff8;
+    }
+
  body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Cormorant Garamond', serif;
       background: #ecdff8;
       overflow-x: hidden;
     }
@@ -14,8 +18,8 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-    }
-
+    
+      }
     .bar h2 {
       margin: 0;
       font-size: 1.2rem;
@@ -66,7 +70,14 @@
       display: block;
     }
     .content{
-        margin-top: 30px ;
-        color: #5b0882;
-        margin-left: 20px;
+      width: min(90vw, 900px);
+      margin: 42px auto 50px;
+      color: #4a155d;
+      text-align: center;
+    }
+
+    .content p{
+      margin: 0 auto 24px;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      line-height: 1.65;
     }

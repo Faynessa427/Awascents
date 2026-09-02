@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initializeProductCards();
   attachScrollButtons();
+  addSelectedProductToCart();
   updateCartUI();
 
   document.body.addEventListener('click', (event) => {
@@ -22,6 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+function addSelectedProductToCart() {
+  const productName = new URLSearchParams(window.location.search).get('product');
+  if (!productName) return;
+
+  const productCard = [...document.querySelectorAll('.first, .First, .Second, .third')]
+    .find((card) => card.dataset.name === productName);
+
+  if (!productCard) return;
+
+  addToCart(productCard.dataset.name, Number(productCard.dataset.price));
+  window.history.replaceState({}, document.title, 'visit.html');
+}
 
 function initializeProductCards() {
   document.querySelectorAll('.first, .First, .Second, .third').forEach((card) => {

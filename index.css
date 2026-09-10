@@ -28,6 +28,20 @@ a {
       z-index: 1000;
     }
 
+    .hero-image {
+      top: 52px;
+      z-index: 900;
+      width: 100%;
+      height: clamp(170px, 28vw, 280px);
+      background: #d8c7e4;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
     .bar h2 {
       margin: 0;
       font-size: 1.2rem;

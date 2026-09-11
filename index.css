@@ -105,8 +105,7 @@ a {
 }
 .hero-image {
   width: 100vw;
-  height: clamp(280px, 38vh, 430px);
-  min-height: clamp(280px, 38vh, 430px);
+  height: 120px;
   background: #e9dce9;
   border-radius: 0;
   overflow: hidden;

@@ -1,11 +1,11 @@
  html {
-      background: #ecdff8;
+      background: rgb(148, 119, 148);
     }
 
  body {
       margin: 0;
       font-family: 'Cormorant Garamond', serif;
-      background: #ecdff8;
+      background: rgb(148, 119, 148);
       overflow-x: hidden;
     }
       .bar {

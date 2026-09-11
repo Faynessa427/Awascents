@@ -1,10 +1,10 @@
   html {
-      background: #ecdff8;
+      background: rgb(148, 119, 148);
     }
 
   body {
       font-family: Arial, sans-serif;
-      background: #ecdff8;
+      background: rgb(148, 119, 148);
     }
     .container{
         margin-top: 80px;

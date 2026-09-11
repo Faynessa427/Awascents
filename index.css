@@ -104,16 +104,23 @@ a {
   display: block;
 }
 .hero-image {
-  width:100%;
-  height: max(130px,30vh);
+  width: 100vw;
+  height: clamp(280px, 38vh, 430px);
+  min-height: clamp(280px, 38vh, 430px);
   background: #e9dce9;
-  border-radius: 0 40px;
+  border-radius: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0;
   filter: saturate(1.08) contrast(1.10);
 }
 
@@ -136,15 +143,17 @@ a {
   margin: 0 auto 34px;
   padding: 0 15px;
   text-align: center;
+  color:white;
 }
 
 .second-note h3 {
   margin: 0;
   font-size: clamp(1.2rem, 2vw, 1.8rem);
   line-height: 1.6;
-  color: #4a155d;
-  font-weight: 500;
+  color: #420c58;
+  font-weight: 1300;
   font-style: italic;
+  margin-top:42px;
 }
 
 .buttons {
@@ -181,8 +190,10 @@ a {
   width: min(740px, calc(100vw - 80px));
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 26px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
   margin: 30px auto 20px auto;
 }
 
@@ -421,7 +432,8 @@ a {
   }
 
   .hero-image {
-    width: min(100vw, calc(100vw - 30px));
+    width: 100vw;
+    margin: 0;
   }
 
   .first-note {

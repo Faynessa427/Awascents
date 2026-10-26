@@ -5,27 +5,37 @@
     <link rel="stylesheet" href="about.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> About us.</title>
+    <title>About Awascents | Our Story</title>
+    <script src="redo.js" defer></script>
   </head>
   <body>
- <section class="bar">
-    <h2><strong>AWASCENTS</strong></h2>
+ <header class="bar">
+    <a class="brand" href="index.html" aria-label="Awascents home">
+      <img src="Awascentslogo.png" alt="">
+      <span>Awascents</span>
+    </a>
     <div class="menu-wrap">
-      <button class="menu-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <nav class="menu-links">
+      <nav class="menu-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="visit.html">Shop here</a>
-        <a href="about.html">About</a>
+        <a href="about.html" aria-current="page">About</a>
         <a href="contact.html">Contact Us</a>
         <a href="terms.html">Terms of use</a>
       </nav>
     </div>
-  </section>
-  <div class="content">
+  </header>
+  <main>
+    <header class="page-heading">
+      <p class="eyebrow">Our point of view</p>
+      <h1>More than a fragrance.</h1>
+      <p>Every scent holds a feeling, a memory, and a way of showing up in the world.</p>
+    </header>
+  <section class="content" aria-label="About Awascents">
     <p> At Awascents, we believe fragrance is more than something you wear. It is an identity, a mood,
       and a memory waiting to be created. We bring together irresistible scents for different personalities.
       We are not here to tell you what to smell like. You already have your own vibe. We are just here to 
@@ -43,3 +53,4 @@
       Welcome to Awascents - where every scent tells a story.
     </p>
   </div>
+  </main>

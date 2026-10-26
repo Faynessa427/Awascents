@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="visit.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
+  <title>Shop Fragrances | Awascents</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="visit.css">
+  <script src="redo.js" defer></script>
 </head>
 <body>
-  <section class="bar">
-    <h2><strong>AWASCENTS</strong></h2>
+  <header class="bar">
+    <a class="brand" href="index.html" aria-label="Awascents home">
+      <img src="Awascentslogo.png" alt="">
+      <span>Awascents</span>
+    </a>
     <div class="menu-wrap">
-      <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span> </span>
-        <span> </span>
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
         <span></span>
       </button>
-      <nav class="menu-links">
+      <nav class="menu-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="visit.html"> Shop here</a>
+        <a href="visit.html" aria-current="page">Shop here</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact Us</a>
-        <a href="terms.html"> Terms of use</a>
+        <a href="terms.html">Terms of use</a>
       </nav>
     </div>
-  </section>
+  </header>
+  <main>
+    <header class="page-heading shop-heading">
+      <p class="eyebrow">Find your signature</p>
+      <h1>Shop the collection</h1>
+      <p>Explore fragrances for every mood, from fresh everyday favorites to unforgettable signature scents.</p>
+    </header>
   <section class="first-one">
     <div class="section-header">
-      <h1>Fresh/Airy</h1>
+      <div>
+        <p class="eyebrow">Light, bright, effortless</p>
+        <h2>Fresh &amp; airy</h2>
+      </div>
       <div class="carousel-controls">
         <button class="scroll-btn prev" data-target="first-row" aria-label="Previous Fresh/Airy perfume">&#8249;</button>
         <button class="scroll-btn next" data-target="first-row" aria-label="Next Fresh/Airy perfume">&#8250;</button>
@@ -71,7 +84,10 @@
 
   <section class="second-one">
     <div class="section-header">
-      <h1>Luxurious</h1>
+      <div>
+        <p class="eyebrow">Made to leave an impression</p>
+        <h2>Luxurious</h2>
+      </div>
       <div class="carousel-controls">
         <button class="scroll-btn prev" data-target="Second-row" aria-label="Previous luxurious perfume">&#8249;</button>
         <button class="scroll-btn next" data-target="Second-row" aria-label="Next luxurious perfume">&#8250;</button>
@@ -125,7 +141,10 @@
 
   <section class="third-one">
     <div class="section-header">
-      <h1>Signature.</h1>
+      <div>
+        <p class="eyebrow">Your scent, your story</p>
+        <h2>Signature scents</h2>
+      </div>
       <div class="carousel-controls">
         <button class="scroll-btn prev" data-target="third-row" aria-label="Previous signature perfume">&#8249;</button>
         <button class="scroll-btn next" data-target="third-row" aria-label="Next signature perfume">&#8250;</button>
@@ -177,7 +196,7 @@
     </div>
   </section>
 
-  <aside class="cart-panel">
+  <aside class="cart-panel" aria-label="Shopping cart">
     <h3>Your Cart</h3>
     <ul id="cart-items">
       <li class="empty-cart">Your cart is empty.</li>
@@ -188,6 +207,7 @@
     </div>
     <a id="proceed-btn" href="order.html" class="proceed-btn">Proceed to order.</a>
   </aside>
+  </main>
 
   <script src="visit.js"></script>
 </body>

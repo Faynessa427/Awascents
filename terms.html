@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <link rel="stylesheet" href="terms.css">
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Terms of use. </title>
+      <title>Terms of Use | Awascents</title>
+      <link rel="stylesheet" href="common.css">
+      <link rel="stylesheet" href="terms.css">
+      <script src="redo.js" defer></script>
    </head>
    <body>
- <section class="bar">
-    <h2><strong>AWASCENTS</strong></h2>
+ <header class="bar">
+    <a class="brand" href="index.html" aria-label="Awascents home">
+      <img src="Awascentslogo.png" alt="">
+      <span>Awascents</span>
+    </a>
     <div class="menu-wrap">
-      <button class="menu-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <nav class="menu-links">
+      <nav class="menu-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="visit.html"> Shop here</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact Us</a>
-        <a href="terms.html">Terms of use</a>
+        <a href="terms.html" aria-current="page">Terms of use</a>
       </nav>
     </div>
-  </section>
-         <h1>Terms of Use</h1>
-         <div class="container">
+  </header>
+  <main>
+    <header class="page-heading">
+      <p class="eyebrow">The details</p>
+      <h1>Terms of use</h1>
+      <p>Please take a moment to review the terms that help keep shopping with Awascents clear and straightforward.</p>
+    </header>
+         <article class="container">
 
             <h2>About Awascents</h2>
             <p>Awascents is an online fragrance store offering perfumes. We aim to provide our customers with quality products, accurate information, and a smooth shopping experience.</p>
@@ -66,7 +76,8 @@
             <p>We reserve the right to update or modify these terms of use at any time. Any updates will be posted directly on this page, and your continued use of the website constitutes acceptance of those changes.</p>
       
 
-            <p class="complaint">  Any complaint?   <a href="contact.html" color="purple"> <strong> Contact us.</strong></a> </p>
-          </div>
+            <p class="complaint">Any complaint? <a href="contact.html"><strong>Contact us.</strong></a></p>
+          </article>
+  </main>
            </body>
         </html>

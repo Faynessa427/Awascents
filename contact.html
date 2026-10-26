@@ -5,44 +5,53 @@
     <link rel="stylesheet" href="contact.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Contact Us </title>
+    <title>Contact Awascents</title>
+    <script src="redo.js" defer></script>
   </head>
   <body>
-    <section class="bar">
-    <h2><strong>AWASCENTS</strong></h2>
+    <header class="bar">
+    <a class="brand" href="index.html" aria-label="Awascents home">
+      <img src="Awascentslogo.png" alt="">
+      <span>Awascents</span>
+    </a>
     <div class="menu-wrap">
-      <button class="menu-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <nav class="menu-links">
+      <nav class="menu-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="visit.html"> Shop here</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="contact.html" aria-current="page">Contact Us</a>
         <a href="terms.html">Terms of use</a>
       </nav>
     </div>
-  </section>
-    <h1> Contact Us </h1>
-    <div class="content">
-      <p>Your Name: </p>
-      <input type="text" id="name" placeholder="Name" required>
-      <p> Your Email</p>
-      <input type="email" id="email" placeholder="Email address" required>
-       <p id="messageError"></p>
-      <p> Message:</p>
-      <textarea id="textarea"></textarea>
-      <p id="messageError"></p>
-      <button id="button"> SEND MESSAGE</button>
-       </div>
+  </header>
+  <main>
+    <header class="page-heading">
+      <p class="eyebrow">We’re here to help</p>
+      <h1>Let’s talk.</h1>
+      <p>Questions about a fragrance or your order? Send us a note and we’ll be glad to help.</p>
+    </header>
+    <form class="content" novalidate>
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" placeholder="Name" required>
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email" placeholder="Email address" required>
+      <label for="textarea">Message</label>
+      <textarea id="textarea" name="message" rows="6" required></textarea>
+      <p id="messageError" role="status" aria-live="polite"></p>
+      <button id="button" type="button">Send message <span aria-hidden="true">↗</span></button>
+    </form>
+  </main>
       <div class="bottom-contact-details">
      <h4> Phone number:<br>
         000-0000-0000 </h4>
 
       <h4>Email Address:<br>
-        Awascents@gmail.com.</h4>
+        <a href="mailto:Awascents@gmail.com">Awascents@gmail.com</a></h4>
       
       <h4> @ All socials-media platforms:<br>
            @Awascents_fragrance.</h4>

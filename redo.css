@@ -1,0 +1,327 @@
+/* 
+   Color palette and design tokens
+   These variables keep the theme consistent across the page.
+   */
+:root {
+  --pink-1: #f8d9e7;
+  --pink-2: #f4bfd9;
+  --pink-3: #e775b2;
+  --pink-4: #ffeaf5;
+  --maroon: #3d0326;
+  --maroon-dark: #29011d;
+  --white: #fff7fb;
+  --shadow: rgba(61, 3, 38, 0.18);
+}
+
+/* 
+   Global reset / base styles
+   Sets box sizing and default page appearance.
+ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: rgb(232, 155, 217);
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  color: #3e1b4a;
+  background-color: rgb(232, 155, 217);
+  overflow-x: hidden;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Background texture behind the page for a soft decorative pattern. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: -80px;
+  z-index: 0;
+  background-image: radial-gradient(rgba(255, 247, 251, 0.55) 1px, transparent 1px);
+  background-size: 54px 54px;
+  opacity: 0.28;
+  transform: rotate(4deg) scale(1.04);
+  pointer-events: none;
+  animation: perfume-dust 38s linear infinite;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: rgb(232, 155, 217);
+  background-size: 160% 160%;
+  pointer-events: none;
+  animation: perfume-glow 20s ease-in-out infinite alternate;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes perfume-dust {
+  from { background-position: 0 0; }
+  to { background-position: 54px 54px; }
+}
+
+@keyframes perfume-glow {
+  from { background-position: 0% 20%; }
+  to { background-position: 100% 80%; }
+}
+
+/*
+   Top navigation bar
+   This is the sticky header that stays visible at the top.
+   */
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+    align-items: center;
+  justify-content: space-between;
+  background: var(--maroon);
+  color: var(--pink-1);
+  padding: 14px 30px;
+  box-shadow: 0 10px 28px rgba(61, 3, 38, 0.18);
+  animation: header-arrive 0.7s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.bar::after {
+  content: '';
+  position: absolute;
+  right: 8%;
+  bottom: 0;
+  left: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--pink-3), var(--white), var(--pink-3), transparent);
+  transform: scaleX(0);
+  animation: header-glimmer 1s 0.45s ease-out forwards;
+  pointer-events: none;
+}
+
+/* Brand/logo section on the left side of the header. */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--pink-1);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: var(--pink-4);
+  animation: logo-arrive 0.8s 0.18s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+/* Menu container used to position the dropdown relative to the toggle. */
+.menu-wrap {
+  position: relative;
+}
+
+/* Hamburger icon button for the menu toggle. */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: 1px solid rgba(61, 3, 38, 0.32);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0 12px;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.3s ease;
+  animation: menu-arrive 0.55s 0.25s ease-out both;
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--pink-3);
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--pink-3);
+  outline-offset: 4px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 99px;
+  background: var(--white);
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.menu-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Floating dropdown menu for navigation links. */
+.menu-links {
+  position: absolute;
+  right: 0;
+  top: 56px;
+  min-width: 180px;
+  background: var(--pink-1);
+  border-radius: 14px;
+  border: 1px solid rgba(61, 3, 38, 0.12);
+  box-shadow: 0 16px 34px rgba(61, 3, 38, 0.18);
+  z-index: 20;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px) scale(0.97);
+  transform-origin: top right;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+}
+
+.menu-links a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: 11px 16px;
+  color: var(--maroon);
+  font-size: 0.95rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+  transition: background 0.25s ease, color 0.25s ease, padding-left 0.25s ease;
+}
+
+.menu-links a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 15%,
+    rgba(239, 155, 194, 0.42) 48%,
+    transparent 80%
+  );
+  transform: translateX(-110%);
+  pointer-events: none;
+}
+
+.menu-links a + a {
+  border-top: 1px solid rgba(61, 3, 38, 0.08);
+}
+
+.menu-links a:hover {
+  background: var(--white);
+  color: var(--maroon-dark);
+  padding-left: 22px;
+}
+
+.menu-links a:hover::before,
+.menu-links a:focus-visible::before {
+  animation: menu-scent-trail 0.65s ease-out;
+}
+
+.menu-links a:focus-visible {
+  outline: 2px solid var(--maroon);
+  outline-offset: -3px;
+}
+
+.menu-links.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.menu-links.open a {
+  animation: menu-link-reveal 0.3s ease-out both;
+}
+
+.menu-links.open a:nth-child(2) {
+  animation-delay: 0.04s;
+}
+
+.menu-links.open a:nth-child(3) {
+  animation-delay: 0.08s;
+}
+
+.menu-links.open a:nth-child(4) {
+  animation-delay: 0.12s;
+}
+
+.menu-links.open a:nth-child(5) {
+  animation-delay: 0.16s;
+}
+
+@keyframes menu-scent-trail {
+  to {
+    transform: translateX(110%);
+  }
+}
+
+@keyframes menu-link-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  body::before,
+  body::after {
+    animation: none;
+  }
+
+  .menu-links,
+  .menu-links a,
+  .menu-toggle,
+  .menu-toggle span {
+    transition: none;
+  }
+
+  .menu-links.open a {
+    animation: none;
+  }
+
+  .menu-links a:hover::before,
+  .menu-links a:focus-visible::before {
+    animation: none;
+  }
+}

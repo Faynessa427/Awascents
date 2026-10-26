@@ -1,120 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awascents | Fragrance Boutique</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="redo.js" defer></script>
   </head>
   <body>
-    <section class="bar">
-      <h2><strong>AWASCENTS</strong></h2>
+    <header class="bar">
+      <a class="brand" href="index.html" aria-label="Awascents home">
+        <img src="Awascentslogo.png" alt="">
+        <span>Awascents</span>
+      </a>
+
       <div class="menu-wrap">
-        <button class="menu-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <nav class="menu-links">
+        <nav class="menu-links" aria-label="Main navigation">
           <a href="index.html">Home</a>
-          <a href="visit.html"> Shop here</a>
+          <a href="visit.html">Shop here</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact Us</a>
           <a href="terms.html">Terms of use</a>
         </nav>
       </div>
-    </section>
-    <div class="hero-image">
-      <img src="girl.jpg" alt="img">
-    </div>
-      <p class="first-note"> A luxury fragrance store.</p>
-      <div class="second-note">
-    <h3>Explore our curated collection of signature perfumes crafted to evoke mood and memory. Take your time, find the fragrance that fits you, and enjoy a refined, effortless shopping experience.</h3>
-    </div>
-     <div class="buttons">
-    <button class="visit-store-button"> <a href="visit.html"> Shop Now</a></button>
-    </div>
-    <section class="details">
-      <div class="rating"> 4.9/5<br> Customers rating</div>
-      <div class="dispatch"> 48h<br> Dispatch time</div>
-    </section>
+    </header>
 
-    <section class="perfume-slideshow">
-      <div class="slideshow" aria-roledescription="carousel">
-        <div class="slide active" data-index="0">
-          <img src="perfume-blue-black.png" alt="Blue Black Perfume">
-          <div class="caption">Blue Black — bold &amp; refined</div>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-image">
+          <img src="girl.jpg" alt="A woman enjoying a fragrance">
         </div>
-        <div class="slide" data-index="1">
-          <img src="perfume-girly.png" alt="Pink Fresh Perfume">
-          <div class="caption">Pink Fresh — bright &amp; uplifting</div>
-        </div>
-        <div class="slide" data-index="2">
-          <img src="perfume-rose-dark.png" alt="Rose Dark Perfume">
-          <div class="caption">Rose Dark - Warm, velvety.</div>
-        </div>
-
-        <div class="dots" role="tablist" aria-label="Slides">
-          <button class="dot active" aria-label="Slide 1" data-index="0"></button>
-          <button class="dot" aria-label="Slide 2" data-index="1"></button>
-          <button class="dot" aria-label="Slide 3" data-index="2"></button>
-        </div>
-      </div>
-    </section>
-    
-    <nav class="imageandwriteup1"> 
-      <div class="bestseller-logo"> Best seller</div>
-        <div class="video-container">
-          <video src="datluxuryvideo.mp4" autoplay muted loop playsinline preload="auto" aria-label="DatLuxury perfume video">
-            Your browser does not support the video tag.
-          </video>
+        <div class="hero-copy">
+          <p class="first-note">A luxury fragrance store</p>
+          <h1 id="hero-title">Find the scent<br>that feels like <em>you.</em></h1>
+          <div class="second-note">
+            <p>Explore our curated collection of signature perfumes crafted to evoke mood and memory. Take your time, find the fragrance that fits you, and enjoy a refined, effortless shopping experience.</p>
           </div>
-        <section class="third-note">
-          <h3> Looking for a luxurious fragrance that makes you smell effortlessly expensive?<br>
-               Shone is that captivating scent that leaves a lasting impression wherever you go.
-              </h3>
-              <a href="visit.html?product=Shone"><strong> Shop now </strong></a>
-              </section>
-              </nav>
-               <nav class="imageandwriteup2"> 
-             <div class="bestseller-logo"> Best seller</div>
-        <figure class="green-fresh-product">
-          <div class="video-container">
-            <video src="perfume-green-video.mp4" autoplay muted loop playsinline preload="auto" aria-label="Green Fresh perfume video">
-              Your browser does not support the video tag.
-            </video>
+          <div class="buttons">
+            <a class="visit-store-button" href="visit.html">Shop the collection <span aria-hidden="true">↗</span></a>
           </div>
-          <figcaption>Green Fresh is a bright, uplifting fragrance with a clean and refreshing finish.</figcaption>
-          <a href="visit.html?product=Green%20Fresh"><strong> Shop now </strong></a>
-        </figure>
-   </nav>
-       <nav class="imageandwriteup3">
-        <div class="bestseller-logo"> Best seller</div>
-        <figure class="yellow-product">
-          <div class="video-container">
-            <video src="perfume-yellow-video.mp4" autoplay muted loop playsinline preload="auto" aria-label="Yellow perfume video">
-              Your browser does not support the video tag.
-            </video>
+          <section class="details" aria-label="Customer service highlights">
+            <div class="rating"><strong>4.9/5</strong><span>Customer rating</span></div>
+            <div class="dispatch"><strong>48h</strong><span>Dispatch time</span></div>
+          </section>
+        </div>
+        <span class="hero-stamp" aria-hidden="true">SCENT<br>IS A<br>MEMORY</span>
+      </section>
+
+      <section class="perfume-slideshow" aria-label="Featured fragrances">
+        <div class="section-heading">
+          <p class="eyebrow">A little inspiration</p>
+          <h2>Fragrances to fall for</h2>
+        </div>
+        <div class="slideshow" aria-roledescription="carousel">
+          <div class="slide active" data-index="0">
+            <img src="perfume-blue-black.png" alt="Blue Black Perfume">
+            <div class="caption">Blue Black — bold &amp; refined</div>
           </div>
-          <figcaption>Elo is a radiant, refreshing fragrance with a bright and joyful finish.</figcaption>
-          <a href="visit.html?product=Elo"><strong> Shop now </strong></a>
-        </figure>
-        </nav>
-    <div class="bottom-contact-details">
-      <h4> AWASCENTS<br>
-          A luxury fragrance store crafting signature<br>
-        scents. </h4>
+          <div class="slide" data-index="1">
+            <img src="perfume-girly.png" alt="Pink Fresh Perfume">
+            <div class="caption">Pink Fresh — bright &amp; uplifting</div>
+          </div>
+          <div class="slide" data-index="2">
+            <img src="perfume-rose-dark.png" alt="Rose Dark Perfume">
+            <div class="caption">Rose Dark — warm and velvety</div>
+          </div>
 
-     <h4> Phone number:<br>
-        001-0003-0005 </h4>
+          <div class="dots" role="tablist" aria-label="Slides">
+            <button class="dot active" aria-label="Slide 1" data-index="0"></button>
+            <button class="dot" aria-label="Slide 2" data-index="1"></button>
+            <button class="dot" aria-label="Slide 3" data-index="2"></button>
+          </div>
+        </div>
+      </section>
 
-      <h4>Email Address:<br>
-        Awascents@gmail.com.</h4>
-      
-      <h4> @ All socials-media platforms:<br>
-           @Awascents_fragrance.</h4>
-    </div>
-    <script src="index.js"> </script>
+      <section class="bestsellers" aria-label="Bestselling fragrances">
+        <div class="section-heading">
+          <p class="eyebrow">Loved by our customers</p>
+          <h2>Signature bestsellers</h2>
+        </div>
+        <div class="bestseller-grid">
+          <article class="imageandwriteup1">
+            <div class="bestseller-logo">Best seller</div>
+            <div class="video-container">
+              <video src="datluxuryvideo.mp4" autoplay muted loop playsinline preload="metadata" aria-label="DatLuxury perfume video">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="third-note">
+              <h3>Looking for a luxurious fragrance that makes you smell effortlessly expensive? Shone is that captivating scent that leaves a lasting impression wherever you go.</h3>
+              <a href="visit.html?product=Shone"><strong>Shop Shone <span aria-hidden="true">↗</span></strong></a>
+            </div>
+          </article>
+
+          <article class="imageandwriteup2">
+            <div class="bestseller-logo">Best seller</div>
+            <figure class="green-fresh-product">
+              <div class="video-container">
+                <video src="perfume-green-video.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Green Fresh perfume video">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <figcaption>Green Fresh is a bright, uplifting fragrance with a clean and refreshing finish.</figcaption>
+              <a href="visit.html?product=Green%20Fresh"><strong>Shop Green Fresh <span aria-hidden="true">↗</span></strong></a>
+            </figure>
+          </article>
+
+          <article class="imageandwriteup3">
+            <div class="bestseller-logo">Best seller</div>
+            <figure class="yellow-product">
+              <div class="video-container">
+                <video src="perfume-yellow-video.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Elo perfume video">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <figcaption>Elo is a radiant, refreshing fragrance with a bright and joyful finish.</figcaption>
+              <a href="visit.html?product=Elo"><strong>Shop Elo <span aria-hidden="true">↗</span></strong></a>
+            </figure>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bottom-contact-details">
+      <h4 class="footer-brand">AWASCENTS<br>
+        <span>A luxury fragrance store crafting signature scents.</span></h4>
+      <h4>Phone number:<br>
+        <a href="tel:00100030005">001-0003-0005</a></h4>
+      <h4>Email address:<br>
+        <a href="mailto:Awascents@gmail.com">Awascents@gmail.com</a></h4>
+      <h4>Find us on social media:<br>
+        <span>@Awascents_fragrance</span></h4>
+    </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
-  

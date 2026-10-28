@@ -1,21 +1,4 @@
 
-const email = document.getElementById('email');
-const emailError = document.getElementById('emailError');
-const button = document.getElementById('button');
-
-if (button) {
-  button.addEventListener('click', function () {
-    if (!email || !email.value.trim()) {
-      if (emailError) {
-        emailError.textContent = 'Enter your email.';
-        emailError.style.color = '#2c063e';
-      }
-      return;
-    }
-    window.location.href = 'feedback.html';
-  });
-}
-
 const videos = document.querySelectorAll('.video-container video');
 
 videos.forEach(video => {

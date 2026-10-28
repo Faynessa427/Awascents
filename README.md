@@ -32,7 +32,6 @@ Awascents is a frontend fragrance store built with HTML, CSS, and JavaScript.
 ├── order.html
 ├── about.html
 ├── contact.html
-├── feedback.html
 ├── response.html
 ├── terms.html
 ├── *.css

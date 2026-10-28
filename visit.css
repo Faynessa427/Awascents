@@ -18,7 +18,7 @@
   display: block;
   margin-bottom: 0.55rem;
   color: var(--maroon);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -41,7 +41,7 @@
   padding: 0.75rem 1rem;
   border: 1px solid rgba(61, 3, 38, 0.2);
   border-radius: 12px;
-  background: #fffafd;
+  background: var(--pink-pale);
   color: var(--maroon);
   font: inherit;
 }
@@ -104,7 +104,7 @@
   border-radius: 12px;
   background: var(--maroon);
   color: var(--pink-pale);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
@@ -119,7 +119,7 @@
 .category-search-status {
   margin: 0.65rem 0 0;
   color: var(--muted);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.78rem;
 }
 
@@ -146,7 +146,7 @@
 .section-header .eyebrow {
   margin: 0 0 0.4rem;
   color: var(--maroon-soft);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -253,7 +253,7 @@
 .Second-row .price,
 .third-row .price {
   color: var(--maroon-soft);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.92rem;
   font-weight: 700;
 }
@@ -267,7 +267,7 @@
   border-radius: 11px;
   background: var(--maroon);
   color: var(--pink-pale);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.84rem;
   font-weight: 700;
   cursor: pointer;
@@ -313,7 +313,7 @@
   justify-content: space-between;
   gap: 0.6rem;
   color: var(--maroon);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.85rem;
 }
 
@@ -350,7 +350,7 @@
   padding-top: 0.75rem;
   border-top: 1px solid var(--line);
   color: var(--maroon);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.95rem;
 }
 
@@ -364,7 +364,7 @@
   border-radius: 99px;
   background: var(--maroon);
   color: var(--pink-pale);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.82rem;
   font-weight: 700;
   transition: background 180ms ease, transform 180ms ease;

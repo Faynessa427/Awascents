@@ -134,6 +134,7 @@ a {
   width: 42px;
   height: 42px;
   object-fit: contain;
+  background-size: cover;
   border-radius: 12px;
   background: var(--pink-4);
   animation: logo-arrive 0.8s 0.18s cubic-bezier(0.2, 0.75, 0.25, 1) both;

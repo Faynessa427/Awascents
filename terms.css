@@ -1,5 +1,6 @@
 .container {
-  width: min(calc(100% - 2 * var(--page-gutter)), 980px);
+  width: calc(100% - var(--page-gutter) - var(--page-gutter));
+  max-width: 980px;
   margin: 0 auto;
   padding: clamp(1.25rem, 4vw, 3.25rem);
   border: 1px solid var(--line);

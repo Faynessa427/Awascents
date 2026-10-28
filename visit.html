@@ -35,7 +35,18 @@
       <h1>Shop the collection</h1>
       <p>Explore fragrances for every mood, from fresh everyday favorites to unforgettable signature scents.</p>
     </header>
-  <section class="first-one">
+  <section class="category-search" aria-label="Find a perfume category">
+    <label for="category-search-input">Search perfume categories</label>
+    <div class="category-search-controls">
+      <div class="category-search-field">
+        <input id="category-search-input" type="search" placeholder="Try fresh, luxurious, or signature" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="category-suggestions">
+        <div class="category-suggestions" id="category-suggestions" role="listbox" aria-label="Available perfume categories" hidden></div>
+      </div>
+      <button class="show-all-categories" id="show-all-categories" type="button" hidden>Show all categories</button>
+    </div>
+    <p class="category-search-status" id="category-search-status" aria-live="polite">Browse all 3 perfume categories.</p>
+  </section>
+  <section class="first-one" data-category="Fresh &amp; airy">
     <div class="section-header">
       <div>
         <p class="eyebrow">Light, bright, effortless</p>
@@ -82,7 +93,7 @@
     </div>
   </section>
 
-  <section class="second-one">
+  <section class="second-one" data-category="Luxurious">
     <div class="section-header">
       <div>
         <p class="eyebrow">Made to leave an impression</p>
@@ -139,7 +150,7 @@
     </div>
   </section>
 
-  <section class="third-one">
+  <section class="third-one" data-category="Signature scents">
     <div class="section-header">
       <div>
         <p class="eyebrow">Your scent, your story</p>

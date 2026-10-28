@@ -236,7 +236,8 @@ textarea:focus-visible {
 .menu-links.open a:nth-child(5) { animation-delay: 140ms; }
 
 .page-heading {
-  width: min(100% - 2 * var(--page-gutter), 1180px);
+  width: calc(100% - var(--page-gutter) - var(--page-gutter));
+  max-width: 1180px;
   margin: clamp(2.5rem, 7vw, 5.5rem) auto 1.8rem;
   animation: content-arrive 700ms ease-out both;
 }

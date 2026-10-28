@@ -35,7 +35,7 @@
       <h1>Let’s talk.</h1>
       <p>Questions about a fragrance or your order? Send us a note and we’ll be glad to help.</p>
     </header>
-    <form class="content" novalidate>
+    <form class="content" id="contact-form">
       <label for="name">Your name</label>
       <input type="text" id="name" name="name" placeholder="Name" required>
       <label for="email">Your email</label>
@@ -43,7 +43,7 @@
       <label for="textarea">Message</label>
       <textarea id="textarea" name="message" rows="6" required></textarea>
       <p id="messageError" role="status" aria-live="polite"></p>
-      <button id="button" type="button">Send message <span aria-hidden="true">↗</span></button>
+      <button id="button" type="submit">Send message <span aria-hidden="true">↗</span></button>
     </form>
   </main>
       <div class="bottom-contact-details">

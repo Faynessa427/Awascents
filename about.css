@@ -1,6 +1,7 @@
 .content {
   display: grid;
-  width: min(calc(100% - 2 * var(--page-gutter)), 980px);
+  width: calc(100% - var(--page-gutter) - var(--page-gutter));
+  max-width: 980px;
   gap: 0;
   margin: 0 auto;
   overflow: hidden;

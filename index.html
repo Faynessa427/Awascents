@@ -15,12 +15,12 @@
       </a>
 
       <div class="menu-wrap">
-        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-navigation">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <nav class="menu-links" aria-label="Main navigation">
+        <nav class="menu-links" id="main-navigation" aria-label="Main navigation">
           <a href="index.html">Home</a>
           <a href="visit.html">Shop here</a>
           <a href="about.html">About</a>
@@ -37,15 +37,15 @@
         </div>
         <div class="hero-copy">
           <p class="first-note">A luxury fragrance store</p>
-          <h1 id="hero-title">Find the scent<br>that feels like <em>you.</em></h1>
+          <h1 id="hero-title">  <br>Welcome to <em>Awascents!</em></h1>
           <div class="second-note">
-            <p>Explore our curated collection of signature perfumes crafted to evoke mood and memory. Take your time, find the fragrance that fits you, and enjoy a refined, effortless shopping experience.</p>
+            <p>Explore our curated collection of signature perfumes. Take your time, find the fragrance that fits you, and enjoy a refined, effortless shopping experience.</p>
           </div>
           <div class="buttons">
             <a class="visit-store-button" href="visit.html">Shop the collection <span aria-hidden="true">↗</span></a>
           </div>
           <section class="details" aria-label="Customer service highlights">
-            <div class="rating"><strong>4.9/5</strong><span>Customer rating</span></div>
+            <div class="rating"><strong>4.9/5</strong><span>Customers rating</span></div>
             <div class="dispatch"><strong>48h</strong><span>Dispatch time</span></div>
           </section>
         </div>
@@ -54,8 +54,8 @@
 
       <section class="perfume-slideshow" aria-label="Featured fragrances">
         <div class="section-heading">
-          <p class="eyebrow">A little inspiration</p>
-          <h2>Fragrances to fall for</h2>
+          <p class="eyebrow">A scent for every moment</p>
+          <h2>Discover your next signature</h2>
         </div>
         <div class="slideshow" aria-roledescription="carousel">
           <div class="slide active" data-index="0">
@@ -81,46 +81,44 @@
 
       <section class="bestsellers" aria-label="Bestselling fragrances">
         <div class="section-heading">
-          <p class="eyebrow">Loved by our customers</p>
+          <p class="eyebrow">Loved by fragrance lovers</p>
           <h2>Signature bestsellers</h2>
         </div>
         <div class="bestseller-grid">
           <article class="imageandwriteup1">
             <div class="bestseller-logo">Best seller</div>
             <div class="video-container">
-              <video src="datluxuryvideo.mp4" autoplay muted loop playsinline preload="metadata" aria-label="DatLuxury perfume video">
+              <video src="datluxuryvideo.mp4" poster="perfume-luxury.png" autoplay muted loop playsinline preload="metadata" aria-label="DatLuxury perfume video">
                 Your browser does not support the video tag.
               </video>
             </div>
             <div class="third-note">
               <h3>Looking for a luxurious fragrance that makes you smell effortlessly expensive? Shone is that captivating scent that leaves a lasting impression wherever you go.</h3>
-              <a href="visit.html?product=Shone"><strong>Shop Shone <span aria-hidden="true">↗</span></strong></a>
+              <a href="visit.html?product=Shone"><strong>Shop now <span aria-hidden="true">↗</span></strong></a>
             </div>
           </article>
-
           <article class="imageandwriteup2">
             <div class="bestseller-logo">Best seller</div>
             <figure class="green-fresh-product">
               <div class="video-container">
-                <video src="perfume-green-video.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Green Fresh perfume video">
+                <video src="perfume-green-video.mp4" poster="perfume-green.png" autoplay muted loop playsinline preload="metadata" aria-label="Green Fresh perfume video">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <figcaption>Green Fresh is a bright, uplifting fragrance with a clean and refreshing finish.</figcaption>
-              <a href="visit.html?product=Green%20Fresh"><strong>Shop Green Fresh <span aria-hidden="true">↗</span></strong></a>
+              <a href="visit.html?product=Green%20Fresh"><strong>Shop now <span aria-hidden="true">↗</span></strong></a>
             </figure>
           </article>
-
           <article class="imageandwriteup3">
             <div class="bestseller-logo">Best seller</div>
             <figure class="yellow-product">
               <div class="video-container">
-                <video src="perfume-yellow-video.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Elo perfume video">
+                <video src="perfume-yellow-video.mp4" poster="perfume-yellow.png" autoplay muted loop playsinline preload="metadata" aria-label="Elo perfume video">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <figcaption>Elo is a radiant, refreshing fragrance with a bright and joyful finish.</figcaption>
-              <a href="visit.html?product=Elo"><strong>Shop Elo <span aria-hidden="true">↗</span></strong></a>
+              <a href="visit.html?product=Elo"><strong>Shop now <span aria-hidden="true">↗</span></strong></a>
             </figure>
           </article>
         </div>
@@ -129,13 +127,17 @@
 
     <footer class="bottom-contact-details">
       <h4 class="footer-brand">AWASCENTS<br>
-        <span>A luxury fragrance store crafting signature scents.</span></h4>
+        <span>A luxury fragrance store crafting signature scents.</span>
+      </h4>
       <h4>Phone number:<br>
-        <a href="tel:00100030005">001-0003-0005</a></h4>
+        <a href="tel:00100030005">001-0003-0005</a>
+      </h4>
       <h4>Email address:<br>
-        <a href="mailto:Awascents@gmail.com">Awascents@gmail.com</a></h4>
-      <h4>Find us on social media:<br>
-        <span>@Awascents_fragrance</span></h4>
+        <a href="mailto:Awascents@gmail.com">Awascents@gmail.com</a>
+      </h4>
+      <h4>Follow us:<br>
+        <span>@Awascents_fragrance</span>
+      </h4>
     </footer>
 
     <script src="index.js"></script>

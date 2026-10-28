@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   initializeProductCards();
+  initializeCategorySearch();
   attachScrollButtons();
   addSelectedProductToCart();
   updateCartUI();
@@ -23,6 +24,98 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+function initializeCategorySearch() {
+  const searchInput = document.getElementById('category-search-input');
+  const suggestions = document.getElementById('category-suggestions');
+  const status = document.getElementById('category-search-status');
+  const showAllButton = document.getElementById('show-all-categories');
+  const categories = [...document.querySelectorAll('[data-category]')];
+
+  if (!searchInput || !suggestions || !status || !showAllButton) return;
+
+  function closeSuggestions() {
+    suggestions.hidden = true;
+    searchInput.setAttribute('aria-expanded', 'false');
+  }
+
+  function renderSuggestions() {
+    const query = searchInput.value.trim().toLocaleLowerCase();
+    const matches = categories.filter((section) =>
+      section.dataset.category.toLocaleLowerCase().includes(query)
+    );
+
+    suggestions.replaceChildren();
+    matches.forEach((section) => {
+      const categoryName = section.dataset.category;
+      const option = document.createElement('button');
+      option.type = 'button';
+      option.className = 'category-suggestion';
+      option.dataset.categoryOption = categoryName;
+      option.textContent = categoryName;
+      suggestions.appendChild(option);
+    });
+
+    suggestions.hidden = matches.length === 0;
+    searchInput.setAttribute('aria-expanded', String(matches.length > 0));
+  }
+
+  function selectCategory(categoryName) {
+    const selectedCategory = categories.find((section) => section.dataset.category === categoryName);
+    if (!selectedCategory) return;
+
+    categories.forEach((section) => {
+      section.hidden = section !== selectedCategory;
+    });
+    searchInput.value = categoryName;
+    showAllButton.hidden = false;
+    status.textContent = `Showing ${categoryName} perfumes.`;
+    closeSuggestions();
+    selectedCategory.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  searchInput.addEventListener('focus', renderSuggestions);
+  searchInput.addEventListener('input', renderSuggestions);
+  searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeSuggestions();
+      return;
+    }
+
+    if (event.key === 'Enter') {
+      const exactMatch = categories.find((section) =>
+        section.dataset.category.toLocaleLowerCase() === searchInput.value.trim().toLocaleLowerCase()
+      );
+      const firstSuggestion = suggestions.querySelector('.category-suggestion');
+      const categoryName = exactMatch?.dataset.category || firstSuggestion?.dataset.category;
+
+      if (categoryName) {
+        event.preventDefault();
+        selectCategory(categoryName);
+      }
+    }
+  });
+
+  suggestions.addEventListener('click', (event) => {
+    const option = event.target.closest('.category-suggestion');
+    if (option) selectCategory(option.dataset.categoryOption);
+  });
+
+  showAllButton.addEventListener('click', () => {
+    categories.forEach((section) => {
+      section.hidden = false;
+    });
+    searchInput.value = '';
+    showAllButton.hidden = true;
+    status.textContent = `Browse all ${categories.length} perfume categories.`;
+    closeSuggestions();
+    searchInput.focus();
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.category-search')) closeSuggestions();
+  });
+}
 
 function addSelectedProductToCart() {
   const productName = new URLSearchParams(window.location.search).get('product');
